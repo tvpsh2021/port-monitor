@@ -1,0 +1,58 @@
+{
+  "name": "app-port-monitor",
+  "version": "1.0.0",
+  "description": "Terminal UI for monitoring open ports on macOS/Linux",
+  "main": "dist/index.js",
+  "bin": {
+    "port-monitor": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsx index.tsx",
+    "build": "tsup",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "keywords": [
+    "port",
+    "monitor",
+    "cli",
+    "terminal",
+    "tui",
+    "network",
+    "lsof"
+  ],
+  "author": "Jimmy Cheng",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimmycheng/port-monitor.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "type": "module",
+  "dependencies": {
+    "ink": "^6.8.0",
+    "ink-text-input": "^6.0.0",
+    "react": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@typescript-eslint/eslint-plugin": "^8.58.0",
+    "@typescript-eslint/parser": "^8.58.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
